@@ -27,6 +27,7 @@
     "loading-animations"
   ],
   "dependencies": {
+    "github-markdown-css": "^2.9.0",
     "vue": "^2.4.4"
   },
   "devDependencies": {
