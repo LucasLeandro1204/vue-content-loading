@@ -4,13 +4,12 @@ import VclCircle from './custom/Circle.js';
 import VclFacebook from './presets/Facebook.js';
 
 const prefix = 'Vcl';
+
 const components = {
   VclFacebook,
 };
 
 export default {
-  components,
-
   props: {
     type: {
       default: 'facebook',
@@ -66,9 +65,11 @@ export default {
     },
 
     component () {
-      return this
+      const component = this
         .components
         .find(component => component.toLowerCase().includes(this.type));
+
+      return components[component].template;
     },
 
     gradientId () {
@@ -78,6 +79,10 @@ export default {
     clipPathId () {
       return 'clipPath-' + this._uid;
     },
+
+    hasSlot () {
+      return typeof this.$slots.default !== 'undefined';
+    },
   },
 
   template: `
@@ -85,11 +90,11 @@ export default {
       <rect :style="{ fill: 'url(#' + gradientId + ')' }" :clip-path="'url(#' + clipPathId + ')'" x="0" y="0" :width="width" :height="height" />
 
       <defs>
-        <clipPath :id="clipPathId">
-          <slot>
-            <component :is="component"></component>
-          </slot>
+        <clipPath :id="clipPathId" v-if="hasSlot">
+          <slot></slot>
         </clipPath>
+
+        <clipPath :id="clipPathId" v-else v-html="component"></clipPath>
 
         <linearGradient :id="gradientId">
           <stop offset="0%" :stop-color="primary">
