@@ -1,17 +1,25 @@
 import VclRect from './custom/Rect.js';
 import VclCircle from './custom/Circle.js';
 
+import VclFacebook from './presets/Facebook.js';
+
+const prefix = 'Vcl';
+const components = {
+  VclFacebook,
+};
+
 export default {
-  components: {
-    VclRect, VclCircle,
-  },
+  components,
 
   props: {
     type: {
       default: 'facebook',
       type: String,
       validator (type) {
-        return true; // validate
+        return Object
+          .keys(components)
+          .filter(key => key.toLowerCase().includes(type))
+          .length === 1;
       },
     },
     speed: {
@@ -51,20 +59,39 @@ export default {
     formatedSpeed () {
       return this.speed + 's';
     },
+
+    components () {
+      return Object
+        .keys(components);
+    },
+
+    component () {
+      return this
+        .components
+        .find(component => component.toLowerCase().includes(this.type));
+    },
+
+    gradientId () {
+      return 'gradient-' + this._uid;
+    },
+
+    clipPathId () {
+      return 'clipPath-' + this._uid;
+    },
   },
 
   template: `
     <svg :viewBox="viewbox" :style="custom" preserveAspectRatio="xMidYMid meet">
-      <rect style="fill: url(#gradient)" clip-path="url(#path)" x="0" y="0" :width="width" :height="height" />
+      <rect :style="{ fill: 'url(#' + gradientId + ')' }" :clip-path="'url(#' + clipPathId + ')'" x="0" y="0" :width="width" :height="height" />
 
       <defs>
-        <clipPath id="path">
+        <clipPath :id="clipPathId">
           <slot>
-            <circle cx="30" cy="30" r="20" />
+            <component :is="component"></component>
           </slot>
         </clipPath>
 
-        <linearGradient id="gradient">
+        <linearGradient :id="gradientId">
           <stop offset="0%" :stop-color="primary">
             <animate attributeName="offset" values="-2; 1" :dur="formatedSpeed" repeatCount="indefinite" />
           </stop>
@@ -83,6 +110,6 @@ export default {
 };
 
 export {
-  Rect,
-  Circle,
+  VclRect,
+  VclCircle,
 };
