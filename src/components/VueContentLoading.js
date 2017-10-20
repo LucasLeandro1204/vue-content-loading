@@ -1,36 +1,18 @@
 import VclRect from './custom/Rect.js';
 import VclCircle from './custom/Circle.js';
 
-import VclFacebook from './presets/Facebook.js';
-
-const prefix = 'Vcl';
-
-const components = {
-  VclFacebook,
-};
-
 export default {
   props: {
-    type: {
-      default: 'facebook',
-      type: String,
-      validator (type) {
-        return Object
-          .keys(components)
-          .filter(key => key.toLowerCase().includes(type))
-          .length === 1;
-      },
-    },
     speed: {
       default: 2,
       type: Number,
     },
     width: {
-      default: 150,
+      default: 400,
       type: Number,
     },
     height: {
-      default: 150,
+      default: 130,
       type: Number,
     },
     custom: Object,
@@ -59,29 +41,12 @@ export default {
       return this.speed + 's';
     },
 
-    components () {
-      return Object
-        .keys(components);
-    },
-
-    component () {
-      const component = this
-        .components
-        .find(component => component.toLowerCase().includes(this.type));
-
-      return components[component].template;
-    },
-
     gradientId () {
       return 'gradient-' + this._uid;
     },
 
     clipPathId () {
       return 'clipPath-' + this._uid;
-    },
-
-    hasSlot () {
-      return typeof this.$slots.default !== 'undefined';
     },
   },
 
@@ -90,11 +55,16 @@ export default {
       <rect :style="{ fill: 'url(#' + gradientId + ')' }" :clip-path="'url(#' + clipPathId + ')'" x="0" y="0" :width="width" :height="height" />
 
       <defs>
-        <clipPath :id="clipPathId" v-if="hasSlot">
-          <slot></slot>
+        <clipPath :id="clipPathId">
+          <slot>
+            <rect x="0" y="0" rx="5" ry="5" width="70" height="70" />
+            <rect x="80" y="17" rx="4" ry="4" width="300" height="13" />
+            <rect x="80" y="40" rx="3" ry="3" width="250" height="10" />
+            <rect x="0" y="80" rx="3" ry="3" width="350" height="10" />
+            <rect x="0" y="100" rx="3" ry="3" width="400" height="10" />
+            <rect x="0" y="120" rx="3" ry="3" width="360" height="10" />
+          </slot>
         </clipPath>
-
-        <clipPath :id="clipPathId" v-else v-html="component"></clipPath>
 
         <linearGradient :id="gradientId">
           <stop offset="0%" :stop-color="primary">
@@ -117,4 +87,5 @@ export default {
 export {
   VclRect,
   VclCircle,
+  VclFacebook,
 };

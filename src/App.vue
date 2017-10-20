@@ -8,16 +8,27 @@
       Inspired in <a href="https://github.com/danilowoz/react-content-loader" target="_blank">React Content Loader</a>
     </blockquote>
 
-    <vue-content-loading></vue-content-loading>
+    <vue-content-loading :custom="custom"></vue-content-loading>
+    
+    <vcl-facebook :custom="custom"></vcl-facebook>
   </article>
 </template>
 
 <script>
-  import VueContentLoading from './components/VueContentLoading.js';
+  import VueContentLoading, { VclFacebook } from './core/components.js';
 
   export default {
     components: {
+      VclFacebook,
       VueContentLoading,
+    },
+
+    data () {
+      return {
+        custom: {
+          maxWidth: '450px',
+        },
+      };
     },
   };
 </script>
