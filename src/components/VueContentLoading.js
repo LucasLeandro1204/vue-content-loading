@@ -10,6 +10,9 @@ export default {
     type: {
       default: 'facebook',
       type: String,
+      validator (type) {
+        return true; // validate
+      },
     },
     speed: {
       default: 2,
@@ -26,11 +29,17 @@ export default {
     custom: Object,
     primary: {
       type: String,
-      default: '#f00',
+      default: '#f0f0f0',
+      validator (color) {
+        return /^#([A-Fa-f0-9]{3}|[A-Fa-f0-9]{6})$/.test(color);
+      },
     },
     secondary: {
       type: String,
-      default: '#0f0',
+      default: '#e0e0e0',
+      validator (color) {
+        return /^#([A-Fa-f0-9]{3}|[A-Fa-f0-9]{6})$/.test(color);
+      },
     },
   },
 
