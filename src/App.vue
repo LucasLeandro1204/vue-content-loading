@@ -39,7 +39,7 @@
 </template>
 
 <script>
-  import VueContentLoading, { VclCode, VclList, VclInstagram, VclFacebook, } from './core/components.js';
+  import VueContentLoading, { VclCode, VclList, VclInstagram, VclFacebook } from './core/components';
 
   export default {
     components: {
