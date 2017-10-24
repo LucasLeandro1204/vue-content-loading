@@ -12,9 +12,13 @@ Simple install it via NPM
 
 ## So how it looks like?
 
-##### Facebook 
+##### Facebook
+
+![Facebook loading](https://raw.githubusercontent.com/LucasLeandro1204/vue-content-loading/master/static/facebook.gif "Facebook loading")
 
 ##### Code
+
+![Code loading](https://raw.githubusercontent.com/LucasLeandro1204/vue-content-loading/master/static/code.gif "Code loading")
 
 [See more here](https://lucasleandro1204.github.io/vue-content-loading/)
 
