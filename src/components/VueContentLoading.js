@@ -40,21 +40,28 @@ export default {
     },
 
     formatedSpeed () {
-      return this.speed + 's';
+      return `${this.speed}s`;
     },
 
     gradientId () {
-      return 'gradient-' + this._uid;
+      return `gradient-${this._uid}`;
     },
 
     clipPathId () {
-      return 'clipPath-' + this._uid;
+      return `clipPath-${this._uid}`;
     },
   },
 
   template: `
     <svg :viewBox="viewbox" preserveAspectRatio="xMidYMid meet">
-      <rect :style="{ fill: 'url(#' + gradientId + ')' }" :clip-path="'url(#' + clipPathId + ')'" x="0" y="0" :width="width" :height="height" />
+      <rect
+        :style="{ fill: 'url(#' + gradientId + ')' }" 
+        :clip-path="'url(#' + clipPathId + ')'"
+        x="0" 
+        y="0" 
+        :width="width" 
+        :height="height" 
+      />
 
       <defs>
         <clipPath :id="clipPathId">
