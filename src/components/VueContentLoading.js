@@ -17,8 +17,6 @@ export default {
       type: Number,
     },
 
-    custom: Object,
-
     primary: {
       type: String,
       default: '#f0f0f0',
@@ -55,7 +53,7 @@ export default {
   },
 
   template: `
-    <svg :viewBox="viewbox" :style="custom" preserveAspectRatio="xMidYMid meet">
+    <svg :viewBox="viewbox" preserveAspectRatio="xMidYMid meet">
       <rect :style="{ fill: 'url(#' + gradientId + ')' }" :clip-path="'url(#' + clipPathId + ')'" x="0" y="0" :width="width" :height="height" />
 
       <defs>
