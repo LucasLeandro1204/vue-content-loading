@@ -10,7 +10,7 @@ Simple install it via NPM
 
 ``$ npm install vue-content-loading --save``
 
-## Linting
+ ## Linting
 
 ``$ npm run lint`` or ``$ npm run lint:fix``
 
