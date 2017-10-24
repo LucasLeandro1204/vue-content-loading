@@ -1,0 +1,18 @@
+{
+  "extends": "airbnb",
+  "rules": {
+    "import/first": 0,
+    "max-len": ["error", 120],
+    "no-underscore-danlge": 0,
+    "space-before-function-paren": ["error", "always"]
+  },
+  "plugins": [
+    "html"
+  ],
+  "settings": {
+    "html/html-extensions": [".vue"]
+  },
+  "env": {
+    "browser": true
+  }
+}

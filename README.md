@@ -10,6 +10,10 @@ Simple install it via NPM
 
 ``$ npm install vue-content-loading --save``
 
+ ## Linting
+
+``$ npm run lint`` or ``$ npm run lint:fix``
+
 ## So how it looks like?
 
 ##### Facebook
