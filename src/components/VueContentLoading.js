@@ -9,15 +9,19 @@ export default {
       default: 2,
       type: Number,
     },
+
     width: {
       default: 400,
       type: Number,
     },
+
     height: {
       default: 130,
       type: Number,
     },
+
     custom: Object,
+
     primary: {
       type: String,
       default: '#f0f0f0',
@@ -25,6 +29,7 @@ export default {
         return colorRegex.test(color);
       },
     },
+
     secondary: {
       type: String,
       default: '#e0e0e0',
