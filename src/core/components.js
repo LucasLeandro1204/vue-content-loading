@@ -1,9 +1,9 @@
-import VueContentLoading from '../components/VueContentLoading.js';
+import VueContentLoading from '../components/VueContentLoading';
 
-import VclCode from '../components/presets/Code.js';
-import VclList from '../components/presets/List.js';
-import VclFacebook from '../components/presets/Facebook.js';
-import VclInstagram from '../components/presets/Instagram.js';
+import VclCode from '../components/presets/Code';
+import VclList from '../components/presets/List';
+import VclFacebook from '../components/presets/Facebook';
+import VclInstagram from '../components/presets/Instagram';
 
 export default VueContentLoading;
 

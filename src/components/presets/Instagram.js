@@ -1,4 +1,4 @@
-import VueContentLoading from '../VueContentLoading.js';
+import VueContentLoading from '../VueContentLoading';
 
 export default {
   components: {

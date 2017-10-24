@@ -1,6 +1,3 @@
-import VclRect from './custom/Rect.js';
-import VclCircle from './custom/Circle.js';
-
 const colorRegex = new RegExp('^#([A-Fa-f0-9]{3}|[A-Fa-f0-9]{6})$');
 
 export default {
