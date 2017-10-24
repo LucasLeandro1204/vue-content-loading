@@ -18,6 +18,9 @@
 
         <h5>Code</h5>
         <vcl-code class="loading"></vcl-code>
+
+        <h5>List</h5>
+        <vcl-list class="loading"></vcl-list>
       </div>
 
       <div>
@@ -29,11 +32,12 @@
 </template>
 
 <script>
-  import VueContentLoading, { VclFacebook, VclInstagram, VclCode } from './core/components.js';
+  import VueContentLoading, { VclCode, VclList, VclInstagram, VclFacebook, } from './core/components.js';
 
   export default {
     components: {
       VclCode,
+      VclList,
       VclFacebook,
       VclInstagram,
       VueContentLoading,
