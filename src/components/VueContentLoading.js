@@ -85,9 +85,3 @@ export default {
     </svg>
   `,
 };
-
-export {
-  VclRect,
-  VclCircle,
-  VclFacebook,
-};

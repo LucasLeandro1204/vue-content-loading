@@ -8,9 +8,9 @@
       Inspired in <a href="https://github.com/danilowoz/react-content-loader" target="_blank">React Content Loader</a>
     </blockquote>
 
-    <vue-content-loading :custom="custom"></vue-content-loading>
+    <!-- <vue-content-loading class="loading"></vue-content-loading> -->
     
-    <vcl-facebook :custom="custom"></vcl-facebook>
+    <vcl-facebook class="loading"></vcl-facebook>
   </article>
 </template>
 
@@ -21,14 +21,6 @@
     components: {
       VclFacebook,
       VueContentLoading,
-    },
-
-    data () {
-      return {
-        custom: {
-          maxWidth: '450px',
-        },
-      };
     },
   };
 </script>
@@ -42,5 +34,9 @@
     max-width: 980px;
     min-width: 200px;
     box-sizing: border-box;
+  }
+
+  .loading {
+    max-width: 450px;
   }
 </style>
