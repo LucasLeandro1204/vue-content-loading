@@ -1,6 +1,8 @@
 import VclRect from './custom/Rect.js';
 import VclCircle from './custom/Circle.js';
 
+const colorRegex = new RegExp('^#([A-Fa-f0-9]{3}|[A-Fa-f0-9]{6})$');
+
 export default {
   props: {
     speed: {
@@ -20,14 +22,14 @@ export default {
       type: String,
       default: '#f0f0f0',
       validator (color) {
-        return /^#([A-Fa-f0-9]{3}|[A-Fa-f0-9]{6})$/.test(color);
+        return colorRegex.test(color);
       },
     },
     secondary: {
       type: String,
       default: '#e0e0e0',
       validator (color) {
-        return /^#([A-Fa-f0-9]{3}|[A-Fa-f0-9]{6})$/.test(color);
+        return colorRegex.test(color);
       },
     },
   },
