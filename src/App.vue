@@ -9,17 +9,29 @@
     </blockquote>
 
     <!-- <vue-content-loading class="loading"></vue-content-loading> -->
-    
-    <vcl-facebook class="loading"></vcl-facebook>
+    <h2>So how it looks like?</h2>
+
+    <div class="row">
+      <div>
+        <h5>Facebook</h5>
+        <vcl-facebook class="loading"></vcl-facebook>
+      </div>
+
+      <div>
+        <h5>Instagram</h5>
+        <vcl-instagram class="loading"></vcl-instagram>
+      </div>
+    </div>
   </article>
 </template>
 
 <script>
-  import VueContentLoading, { VclFacebook } from './core/components.js';
+  import VueContentLoading, { VclFacebook, VclInstagram, } from './core/components.js';
 
   export default {
     components: {
       VclFacebook,
+      VclInstagram,
       VueContentLoading,
     },
   };
@@ -29,14 +41,39 @@
   @import "../node_modules/github-markdown-css/github-markdown.css";
 
   body {
-    padding: 45px;
     margin: 0 auto;
-    max-width: 980px;
-    min-width: 200px;
+    max-width: 780px;
+    padding: 45px 15px;
     box-sizing: border-box;
   }
 
   .loading {
-    max-width: 450px;
+    min-width: 300px;
+  }
+
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+
+    > div {
+      flex: 1;
+      padding: 0 10px;
+
+      &:first-of-type {
+        padding-left: 0;
+        padding-right: 10px;
+      }
+
+      &:last-of-type {
+        padding-right: 0;
+        padding-left: 10px;
+      }
+    }
+  }
+
+  @media screen and (max-width: 650px) {
+    .row > div {
+      padding: 0 !important;
+    }
   }
 </style>
