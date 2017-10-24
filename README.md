@@ -73,5 +73,14 @@ Colors props are required to be HEX with hash prefix.
 * Facebook *(VclFacebook)*
 * Instagram *(VclInstagram)*
 
+## Development
+#### Linting
+
+``$ npm run lint``
+
+To automatically fix the problems, run
+
+``$ npm run lint:fix``
+
 ##### License
 MIT
