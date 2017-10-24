@@ -8,7 +8,10 @@
       Inspired in <a href="https://github.com/danilowoz/react-content-loader" target="_blank">React Content Loader</a>
     </blockquote>
 
-    <!-- <vue-content-loading class="loading"></vue-content-loading> -->
+    <h2>Installation</h2>
+    <p>Simple install it via NPM</p>
+    <code>$ npm install vue-content-loading --save</code>
+
     <h2>So how it looks like?</h2>
 
     <div class="row">
@@ -28,6 +31,10 @@
         <vcl-instagram class="loading"></vcl-instagram>
       </div>
     </div>
+
+    <br>
+    <br>
+    <a href="#">You want to read more about? Check out our readme!</a>
   </article>
 </template>
 
