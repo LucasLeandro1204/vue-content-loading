@@ -4,7 +4,7 @@ var webpack = require('webpack')
 module.exports = {
   entry: {
     app: './src/main.js',
-    vuecontentloading: './src/components/VueContentLoading.js',
+    vuecontentloading: './src/core/components.js',
   },
   output: {
     path: path.resolve(__dirname, './dist'),
