@@ -9,7 +9,7 @@
     </blockquote>
 
     <h2>Installation</h2>
-    <p>Simple install it via NPM</p>
+    <p>Simply install it via NPM</p>
     <code>$ npm install vue-content-loading --save</code>
 
     <h2>So how it looks like?</h2>
@@ -34,7 +34,7 @@
 
     <br>
     <br>
-    <a href="#">You want to read more about? Check out our readme!</a>
+    <a href="#">Do you want to read more about? Check out our readme!</a>
   </article>
 </template>
 
