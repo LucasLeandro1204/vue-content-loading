@@ -6,7 +6,7 @@
 
 ## Installation
 
-Simple install it via NPM
+Simply install it via NPM
 
 ``$ npm install vue-content-loading --save``
 
@@ -62,7 +62,7 @@ Simple install it via NPM
 | primary   | String | #f0f0f0 | Background the SVG |
 | secondary | String | #e0e0e0 | Animation color    |
 
-Colors props are required to be HEX with hash prefix.
+Color props are required to be HEX with hash prefix.
 
 *Props are validate, so it minimize mistakes xd*
 
@@ -74,6 +74,19 @@ Colors props are required to be HEX with hash prefix.
 * Instagram *(VclInstagram)*
 
 ## Development
+
+To run for development run
+
+``$ npm run dev``
+
+This will host the application at localhost:8080
+
+To build for production run
+
+``$ npm run build``
+
+The above command bundle the app and also features minification to help reduce file size
+
 #### Linting
 
 ``$ npm run lint``
@@ -83,4 +96,5 @@ To automatically fix the problems, run
 ``$ npm run lint:fix``
 
 ##### License
+
 MIT
