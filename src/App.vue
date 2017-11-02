@@ -32,6 +32,9 @@
       <div>
         <h5>Instagram</h5>
         <vcl-instagram class="loading"></vcl-instagram>
+
+        <h5>Bullet List</h5>
+        <vcl-bullet-list class="loading"></vcl-bullet-list>
       </div>
     </div>
 
@@ -60,7 +63,7 @@
   }
 
   .loading {
-    min-width: 300px;
+    min-width: 200px;
   }
 
   .row {
