@@ -24,11 +24,17 @@
 
         <h5>List</h5>
         <vcl-list class="loading"></vcl-list>
+
+        <h5>Twitch</h5>
+        <vcl-twitch class="loading"></vcl-twitch>
       </div>
 
       <div>
         <h5>Instagram</h5>
         <vcl-instagram class="loading"></vcl-instagram>
+
+        <h5>Bullet List</h5>
+        <vcl-bullet-list class="loading"></vcl-bullet-list>
       </div>
     </div>
 
@@ -39,16 +45,10 @@
 </template>
 
 <script>
-  import VueContentLoading, { VclCode, VclList, VclInstagram, VclFacebook } from './core/components';
+  import * as VclComponents from './core/components';
 
   export default {
-    components: {
-      VclCode,
-      VclList,
-      VclFacebook,
-      VclInstagram,
-      VueContentLoading,
-    },
+    components: VclComponents,
   };
 </script>
 
@@ -63,7 +63,7 @@
   }
 
   .loading {
-    min-width: 300px;
+    min-width: 200px;
   }
 
   .row {

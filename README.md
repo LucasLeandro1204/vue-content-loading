@@ -54,13 +54,13 @@ Simply install it via NPM
 
 #### Props
 
-| Prop      | Type   | Default | Description        |
-|:---------:|:------:|:-------:|:------------------:|
-| speed     | Number | 2       | Animation speed    |
-| width     | Number | 400     | Width component    |
-| height    | Number | 150     | Height component   |
-| primary   | String | #f0f0f0 | Background the SVG |
-| secondary | String | #e0e0e0 | Animation color    |
+| Prop      | Type   | Default | Description      |
+|:---------:|:------:|:-------:|:----------------:|
+| speed     | Number | 2       | Animation speed  |
+| width     | Number | 400     | Width component  |
+| height    | Number | 150     | Height component |
+| primary   | String | #f0f0f0 | SVG Background   |
+| secondary | String | #e0e0e0 | Animation color  |
 
 Color props are required to be HEX with hash prefix.
 
