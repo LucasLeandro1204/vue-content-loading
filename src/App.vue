@@ -40,7 +40,7 @@
 
     <br>
     <br>
-    <a href="#">Do you want to read more about? Check out our readme!</a>
+    <a href="https://github.com/lucasLeandro1204/vue-content-loading">Do you want to read more about? Check out our readme!</a>
   </article>
 </template>
 
