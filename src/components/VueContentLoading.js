@@ -1,4 +1,4 @@
-const colorRegex = new RegExp('^#([A-Fa-f0-9]{3}|[A-Fa-f0-9]{6})$');
+const validateColor = color => /^#([A-Fa-f0-9]{3}|[A-Fa-f0-9]{6})$/.test(color);
 
 export default {
   props: {
@@ -20,17 +20,13 @@ export default {
     primary: {
       type: String,
       default: '#f0f0f0',
-      validator (color) {
-        return colorRegex.test(color);
-      },
+      validator: validateColor,
     },
 
     secondary: {
       type: String,
       default: '#e0e0e0',
-      validator (color) {
-        return colorRegex.test(color);
-      },
+      validator: validateColor,
     },
   },
 
