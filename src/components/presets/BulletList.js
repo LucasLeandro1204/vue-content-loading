@@ -5,10 +5,11 @@ export default {
     VueContentLoading,
   },
 
-  data () {
-    return {
-      rows: 5,
-    };
+  props: {
+    rows: {
+      default: 5,
+      type: Number,
+    }
   },
 
   computed: {

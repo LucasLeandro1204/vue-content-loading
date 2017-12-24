@@ -34,9 +34,13 @@
 
 ### Bullet List
 
+| Custom Prop | Type   | Default | Description      |
+|:-----------:|:------:|:-------:|:----------------:|
+| rows        | Number | 5       | The list rows    |
+
 <color-switch>
   <template slot-scope="props">
-    <vcl-bullet-list :primary="props.primary" :secondary="props.secondary" />
+    <vcl-bullet-list :primary="props.primary" :secondary="props.secondary" :rows="5" />
   </template>
 </color-switch>
 
