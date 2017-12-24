@@ -4,9 +4,19 @@
 
 > Inspired in [React Content Loader](https://github.com/danilowoz/react-content-loader)
 
+## So how it looks like?
+
+Facebook
+
+![Facebook loading](https://raw.githubusercontent.com/LucasLeandro1204/vue-content-loading/master/static/facebook.gif "Facebook loading")
+
+Code
+
+![Code loading](https://raw.githubusercontent.com/LucasLeandro1204/vue-content-loading/master/static/code.gif "Code loading")
+
 # Documentation & Examples
 
-Documentation with all presets is available at [HERE](foo)
+Documentation with all presets is available at [HERE](https://lucasleandro1204.github.io/vue-content-loading)
 
 ## Installation
 
@@ -14,18 +24,6 @@ Simply install it via NPM
 
 ``$ npm install vue-content-loading --save``
 
-## Development
-
-Clone the repo
-
-``$ git clone https://github.com/LucasLeandro1204/vue-content-loading.git``
-
-Run dev
-
-``$ npm run dev``
-
-This will host the application at localhost:8080
-
 ##### License
 
-MIT
+This project is licensed under the MIT license. See the LICENSE.md file for more details
