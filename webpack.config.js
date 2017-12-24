@@ -3,12 +3,12 @@ var webpack = require('webpack')
 
 module.exports = {
   entry: {
-    '../docs/assets/js/app': './src/app.js',
-     vuecontentloading: './src/core/components.js'
+    'docs/assets/js/app.js': './src/app.js',
+     'dist/vuecontentloading.js': './src/core/components.js'
   },
   output: {
-    path: path.resolve(__dirname, './dist'),
-    filename: '[name].js',
+    path: path.resolve(__dirname, './'),
+    filename: '[name]',
     library: 'VueContentLoading',
     libraryTarget: 'umd'
   },
