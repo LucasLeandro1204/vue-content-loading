@@ -9,7 +9,7 @@ export default {
     rows: {
       default: 5,
       type: Number,
-    }
+    },
   },
 
   computed: {
@@ -19,7 +19,7 @@ export default {
   },
 
   methods: {
-    getYPos(row, plus) {
+    getYPos (row, plus) {
       return plus + ((row - 1) * 22);
     },
   },
