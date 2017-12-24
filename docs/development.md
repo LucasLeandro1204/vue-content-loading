@@ -1,8 +1,8 @@
-# Getting started
+# Development
 
-Clone the repo
+Fork the repo then clone it
 
-``$ git clone https://github.com/LucasLeandro1204/vue-content-loading.git && cd vue-content-loading``
+``$ git clone git@github.com:YourUsername/vue-content-loading.git && cd vue-content-loading``
 
 Install npm dependencies
 
