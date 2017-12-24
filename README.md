@@ -20,10 +20,10 @@ Documentation with all presets is available at [HERE](https://lucasleandro1204.g
 
 ## Installation
 
-Simply install it via NPM
+Simple install via NPM
 
 ``$ npm install vue-content-loading --save``
 
 ##### License
 
-This project is licensed under the MIT license. See the LICENSE.md file for more details
+This project is licensed under the MIT license. See the LICENSE file for more details

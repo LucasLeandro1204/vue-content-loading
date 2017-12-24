@@ -2,7 +2,7 @@
 
 ## Installation
 
-Simple install it via NPM
+Simple install via NPM
 
 ``$ npm install vue-content-loading --save``
 
