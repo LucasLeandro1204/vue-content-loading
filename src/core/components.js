@@ -1,11 +1,11 @@
-import VueContentLoading from '../components/VueContentLoading';
+import VueContentLoading from '../components/VueContentLoading.vue';
 
-import VclCode from '../components/presets/Code';
-import VclList from '../components/presets/List';
-import VclTwitch from '../components/presets/Twitch';
-import VclFacebook from '../components/presets/Facebook';
-import VclInstagram from '../components/presets/Instagram';
-import VclBulletList from '../components/presets/BulletList';
+import VclCode from '../components/presets/Code.vue';
+import VclList from '../components/presets/List.vue';
+import VclTwitch from '../components/presets/Twitch.vue';
+import VclFacebook from '../components/presets/Facebook.vue';
+import VclInstagram from '../components/presets/Instagram.vue';
+import VclBulletList from '../components/presets/BulletList.vue';
 
 export default VueContentLoading;
 
