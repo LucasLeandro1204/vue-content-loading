@@ -1,6 +1,6 @@
 # Development
 
-Fork the repo then clone it
+Fork and clone the repo
 
 ``$ git clone git@github.com:YourUsername/vue-content-loading.git && cd vue-content-loading``
 
@@ -16,16 +16,16 @@ This will host the application at localhost:8080
 
 ## Production
 
-To build for production run
+To build for production, run:
 
 ``$ npm run build``
 
-The above command bundle the app and also features minification to help reduce file size
+The above command bundles and minifies the app files.
 
 ## Linting
 
 ``$ npm run lint``
 
-To automatically fix the problems, run
+To automatically fix linting problems, run:
 
 ``$ npm run lint:fix``

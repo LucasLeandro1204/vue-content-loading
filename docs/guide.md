@@ -2,19 +2,19 @@
 
 ## Installation
 
-Simple install via NPM
+Simple installation via NPM
 
 ``$ npm install vue-content-loading --save``
 
 ## Usage
 
-First import it
+Firstly, import it:
 
 ```javascript
   import { VclFacebook, VclInstagram } from 'vue-content-loading';
 ```
 
-Then define as component
+Then define it as a component
 
 ```vue
   <script>
@@ -27,7 +27,7 @@ Then define as component
   </script>
 ```
 
-Now you can use it like you use any other else component =)
+Now you can use it just like you use any other vue component =)
 
 ```vue
   <template>
@@ -36,11 +36,11 @@ Now you can use it like you use any other else component =)
   </template>
 ```
 
-*You can bind custom attrs to presets too xd*
+*You may as well bind custom attrs to presets xd*
 
 ## Options
 
-Every preset accept the props below, but presets *maybe* have custom props
+All presets accept the props below, but they *may* have other custom props
 
 | Prop      | Type   | Default | Description      |
 |:---------:|:------:|:-------:|:----------------:|
@@ -50,7 +50,7 @@ Every preset accept the props below, but presets *maybe* have custom props
 | primary   | String | #f0f0f0 | SVG Background   |
 | secondary | String | #e0e0e0 | Animation color  |
 
-Color props are required to be HEX with hash prefix.
+Color props are required to be *HEX* with a proper pound sign ('#') as its prefix.
 
 *Props are validate, so it minimize mistakes xd*
 
@@ -78,4 +78,4 @@ It's really simple to build a preset, you only need to know the basics of SVG
   </template>
 ```
 
-*If you let vue-content-loading component empty, the default one will be facebook*
+*If you do not specify a vue-content-loading component, Facebook's preset will be used as default*
