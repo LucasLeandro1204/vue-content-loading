@@ -10,6 +10,14 @@
   </template>
 </color-switch>
 
+Now with "RTL" option
+
+<color-switch>
+  <template slot-scope="props">
+    <vcl-facebook :primary="props.primary" :secondary="props.secondary" rtl></vcl-facebook>
+  </template>
+</color-switch>
+
 ## License
 
 This project is licensed under the MIT license. See the [LICENSE file](https://github.com/LucasLeandro1204/vue-content-loading/blob/master/LICENSE) for more details.

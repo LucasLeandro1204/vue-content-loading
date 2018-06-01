@@ -42,13 +42,14 @@ Now you can use it just like you use any other vue component =)
 
 All presets accept the props below, but they *may* have other custom props
 
-| Prop      | Type   | Default | Description      |
-|:---------:|:------:|:-------:|:----------------:|
-| speed     | Number | 2       | Animation speed  |
-| width     | Number | 400     | Width component  |
-| height    | Number | 150     | Height component |
-| primary   | String | #f0f0f0 | SVG Background   |
-| secondary | String | #e0e0e0 | Animation color  |
+| Prop      | Type    | Default | Description      |
+|:---------:|:-------:|:-------:|:----------------:|
+| rtl       | Boolean | false   | RTL version      |
+| speed     | Number  | 2       | Animation speed  |
+| width     | Number  | 400     | Width component  |
+| height    | Number  | 150     | Height component |
+| primary   | String  | #f0f0f0 | SVG Background   |
+| secondary | String  | #e0e0e0 | Animation color  |
 
 Color props are required to be *HEX* with a proper pound sign ('#') as its prefix.
 
