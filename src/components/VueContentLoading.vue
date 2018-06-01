@@ -1,8 +1,8 @@
 <template>
   <svg :viewBox="viewbox" preserveAspectRatio="xMidYMid meet">
     <rect
-      :style="{ fill: 'url(#' + gradientId + ')' }"
-      :clip-path="'url(#' + clipPathId + ')'"
+      :style="rect.style"
+      :clip-path="rect.clipPath"
       x="0"
       y="0"
       :width="width"
@@ -43,7 +43,9 @@
 
   export default {
     name: 'VueContentLoading',
+
     props: {
+
       speed: {
         default: 2,
         type: Number,
@@ -87,6 +89,15 @@
 
       clipPathId () {
         return `clipPath-${this._uid}`;
+      },
+
+      rect () {
+        return {
+          style: {
+            fill: 'url(#' + this.gradientId + ')',
+          },
+          clipPath: 'url(#' + this.clipPathId + ')',
+        };
       },
     },
   };
