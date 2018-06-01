@@ -1,5 +1,8 @@
 <template>
-  <svg :viewBox="viewbox" preserveAspectRatio="xMidYMid meet">
+  <svg
+    :viewBox="viewbox"
+    :style="svg"
+    preserveAspectRatio="xMidYMid meet">
     <rect
       :style="rect.style"
       :clip-path="rect.clipPath"
@@ -45,6 +48,10 @@
     name: 'VueContentLoading',
 
     props: {
+      rtl: {
+        default: false,
+        type: Boolean,
+      },
 
       speed: {
         default: 2,
@@ -89,6 +96,14 @@
 
       clipPathId () {
         return `clipPath-${this._uid}`;
+      },
+
+      svg () {
+        if (this.rtl) {
+          return {
+            transform: 'rotateY(180deg)',
+          };
+        }
       },
 
       rect () {
