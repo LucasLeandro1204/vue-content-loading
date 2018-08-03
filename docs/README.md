@@ -10,7 +10,7 @@
   </template>
 </color-switch>
 
-Now with "RTL" option
+RTL
 
 <color-switch>
   <template slot-scope="props">

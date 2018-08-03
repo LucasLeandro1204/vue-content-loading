@@ -44,7 +44,7 @@ All presets accept the props below, but they *may* have other custom props
 
 | Prop      | Type    | Default | Description      |
 |:---------:|:-------:|:-------:|:----------------:|
-| rtl       | Boolean | false   | RTL version      |
+| rtl       | Boolean | false   | RTL              |
 | speed     | Number  | 2       | Animation speed  |
 | width     | Number  | 400     | Width component  |
 | height    | Number  | 150     | Height component |
