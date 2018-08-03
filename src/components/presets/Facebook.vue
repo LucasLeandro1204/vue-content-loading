@@ -1,3 +1,13 @@
+<script>
+  import VueContentLoading from '../VueContentLoading.vue';
+
+  export default {
+    components: {
+      VueContentLoading,
+    },
+  };
+</script>
+
 <template>
   <vue-content-loading v-bind="$attrs">
     <rect x="0" y="0" rx="5" ry="5" width="70" height="70" />
@@ -8,13 +18,3 @@
     <rect x="0" y="120" rx="3" ry="3" width="360" height="10" />
   </vue-content-loading>
 </template>
-
-<script>
-  import VueContentLoading from '../VueContentLoading.vue';
-
-  export default {
-    components: {
-      VueContentLoading,
-    },
-  };
-</script>

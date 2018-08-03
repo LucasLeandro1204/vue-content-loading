@@ -1,42 +1,49 @@
 <script>
+  const colors = [
+    {
+      primary: '#bdc3c7',
+      secondary: '#95a5a6',
+    },
+    {
+      primary: '#3498db',
+      secondary: '#2980b9',
+    },
+    {
+      primary: '#1abc9c',
+      secondary: '#16a085',
+    },
+    {
+      primary: '#f1c40f',
+      secondary: '#f39c12',
+    },
+    {
+      primary: '#e67e22',
+      secondary: '#d35400',
+    },
+    {
+      primary: '#e74c3c',
+      secondary: '#c0392b',
+    },
+    {
+      primary: '#9b59b6',
+      secondary: '#8e44ad',
+    },
+  ];
+
   export default {
     data () {
       return {
-        colors: [
-          {
-            primary: '#bdc3c7',
-            secondary: '#95a5a6',
-          },
-          {
-            primary: '#3498db',
-            secondary: '#2980b9',
-          },
-          {
-            primary: '#1abc9c',
-            secondary: '#16a085',
-          },
-          {
-            primary: '#f1c40f',
-            secondary: '#f39c12',
-          },
-          {
-            primary: '#e67e22',
-            secondary: '#d35400',
-          },
-          {
-            primary: '#e74c3c',
-            secondary: '#c0392b',
-          },
-          {
-            primary: '#9b59b6',
-            secondary: '#8e44ad',
-          },
-        ],
         background: {
           primary: '#bdc3c7',
           secondary: '#95a5a6',
         },
       };
+    },
+
+    computed: {
+      colors () {
+        return colors;
+      },
     },
 
     methods: {

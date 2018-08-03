@@ -1,3 +1,32 @@
+<script>
+  import VueContentLoading from '../VueContentLoading.vue';
+
+  export default {
+    components: {
+      VueContentLoading,
+    },
+
+    props: {
+      rows: {
+        default: 5,
+        type: Number,
+      },
+    },
+
+    computed: {
+      height () {
+        return this.rows * 21;
+      },
+    },
+
+    methods: {
+      getYPos (row, plus) {
+        return plus + ((row - 1) * 22);
+      },
+    },
+  };
+</script>
+
 <template>
   <vue-content-loading v-bind="$attrs" :width="230" :height="height">
     <template v-for="i in rows">
@@ -6,28 +35,3 @@
     </template>
   </vue-content-loading>
 </template>
-
-<script>
-  import VueContentLoading from '../VueContentLoading.vue';
-  export default {
-    components: {
-      VueContentLoading,
-    },
-    props: {
-      rows: {
-        default: 5,
-        type: Number,
-      },
-    },
-    computed: {
-      height () {
-        return this.rows * 21;
-      },
-    },
-    methods: {
-      getYPos (row, plus) {
-        return plus + ((row - 1) * 22);
-      },
-    },
-  };
-</script>
