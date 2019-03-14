@@ -15,6 +15,7 @@
   - [List](presets.md?id=list)
   - [Bullet List](presets.md?id=bullet-list)
   - [Twitch](presets.md?id=twitch)
+  - [Table](presets.md?id=table)
 
 - Development
   - [Getting started](development.md?id=development)

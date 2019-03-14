@@ -51,3 +51,16 @@
     <vcl-twitch :primary="props.primary" :secondary="props.secondary" />
   </template>
 </color-switch>
+
+### Table
+
+| Custom Prop | Type    | Default | Description       |
+|:-----------:|:-------:|:-------:|:-----------------:|
+| rows        | Number  | 5       | Number of rows    |
+| columns     | Number  | 4       | Number of columns |
+
+<color-switch>
+  <template slot-scope="props">
+    <vcl-table :primary="props.primary" :secondary="props.secondary" :rows="5" :columns="4" />
+  </template>
+</color-switch>
