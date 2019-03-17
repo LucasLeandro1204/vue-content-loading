@@ -6,6 +6,7 @@ import VclTwitch from '../components/presets/Twitch.vue';
 import VclFacebook from '../components/presets/Facebook.vue';
 import VclInstagram from '../components/presets/Instagram.vue';
 import VclBulletList from '../components/presets/BulletList.vue';
+import VclTable from '../components/presets/Table.vue';
 
 export default VueContentLoading;
 
@@ -16,5 +17,6 @@ export {
   VclFacebook,
   VclInstagram,
   VclBulletList,
+  VclTable,
   VueContentLoading,
 };
