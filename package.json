@@ -1,0 +1,45 @@
+{
+  "name": "vue-content-loading",
+  "description": "Vue component to easily build (or use presets) SVG loading cards Facebook like.",
+  "version": "2.0.0",
+  "author": {
+    "name": "Lucas Leandro",
+    "url": "https://lucasleandro.dev",
+    "email": "lucasleandro1204@gmail.com"
+  },
+  "license": "MIT",
+  "private": false,
+  "files": [
+    "dist/"
+  ],
+  "cdn": "dist/vue-content-loading.js",
+  "main": "dist/vue-content-loading.cjs.js",
+  "unpkg": "dist/vue-content-loading.js",
+  "module": "dist/vue-content-loading.es.js",
+  "jsdelivr": "dist/vue-content-loading.js",
+  "umd:main": "dist/vue-content-loading.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LucasLeandro1204/vue-content-loading.git"
+  },
+  "scripts": {
+    "lint": "eslint --ext .vue,.js src/*",
+    "lint:fix": "eslint --fix --ext .vue,.js src/*"
+  },
+  "keywords": [
+    "ui",
+    "ux",
+    "svg",
+    "vue",
+    "card",
+    "cards",
+    "vuejs",
+    "loading",
+    "facebook",
+    "animation",
+    "loading-animations"
+  ],
+  "devDependencies": {
+    "vuepress": "^0.14.10"
+  }
+}

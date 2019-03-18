@@ -1,7 +1,6 @@
 .DS_Store
-node_modules/
-dist/vuecontentloading.js
-dist/vuecontentloading.js.map
+node_modules
+dist
 npm-debug.log
 yarn-error.log
 
