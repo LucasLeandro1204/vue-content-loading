@@ -10,13 +10,13 @@ pageClass: extra-spacing
 
 <Showcase type="VclFacebook" />
 
-<!--
 ## Instagram
 
 `VclInstagram`
 
 <Showcase type="VclInstagram" />
 
+<!--
 ## Code
 
 `VclCode`
