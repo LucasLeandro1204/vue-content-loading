@@ -41,7 +41,7 @@
       type: {
         type: String,
         required: false,
-        default: 'VclFacebook',
+        default: 'VclFacebookx',
       },
 
       rtl: {
