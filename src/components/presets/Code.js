@@ -1,9 +1,7 @@
 import VueContentLoading from '../VueContentLoading';
 
 export default {
-  components: {
-    VueContentLoading,
-  },
+  functional: true,
 
   render: (h, {
     data,

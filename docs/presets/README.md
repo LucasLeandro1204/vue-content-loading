@@ -9,6 +9,7 @@ pageClass: extra-spacing
 `VclFacebook`
 
 <Showcase type="VclFacebook" />
+<!--
 
 ## Instagram
 
@@ -22,13 +23,12 @@ pageClass: extra-spacing
 
 <Showcase type="VclCode" />
 
-<!--
-
 ## List
 
 `VclList`
 
 <Showcase type="VclList" />
+
 
 ## Bullet List
 
