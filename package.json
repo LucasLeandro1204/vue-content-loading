@@ -1,7 +1,7 @@
 {
   "name": "vue-content-loading",
   "description": "Vue component to easily build (or use presets) SVG loading cards Facebook like.",
-  "version": "1.5.3",
+  "version": "1.6.1",
   "author": "Lucas Leandro",
   "license": "MIT",
   "private": false,
