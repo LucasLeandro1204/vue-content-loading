@@ -1,6 +1,6 @@
 import VueContentLoading from './components/VueContentLoading';
 
-// import VclCode from './components/presets/Code.vue';
+import VclCode from './components/presets/Code';
 // import VclList from './components/presets/List.vue';
 // import VclTable from './components/presets/Table.vue';
 // import VclTwitch from './components/presets/Twitch.vue';
@@ -11,7 +11,7 @@ import VclInstagram from './components/presets/Instagram';
 export default VueContentLoading;
 
 export {
-  // VclCode,
+  VclCode,
   // VclList,
   // VclTable,
   // VclTwitch,
