@@ -6,6 +6,7 @@ module.exports = {
     repoLabel: 'GitHub',
     editLinks: true,
     editLinkText: 'Help us improve this page!',
+
     nav: [
       {
         text: 'Home',
@@ -15,6 +16,11 @@ module.exports = {
         text: 'Guide',
         link: '/guide/',
       },
+    ],
+
+    sidebar: [
+      '/guide/',
+      '/presets/',
     ],
   },
 };
