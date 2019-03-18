@@ -23,8 +23,11 @@
     "url": "git+https://github.com/LucasLeandro1204/vue-content-loading.git"
   },
   "scripts": {
-    "lint": "eslint --ext .vue,.js src/*",
-    "lint:fix": "eslint --fix --ext .vue,.js src/*"
+    "docs:dev": "vuepress dev docs",
+    "docs:build": "vuepress build docs"
+  },
+  "resolutions": {
+    "webpack-dev-middleware": "3.6.0"
   },
   "keywords": [
     "ui",
