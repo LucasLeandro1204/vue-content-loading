@@ -11,13 +11,15 @@ footer: MIT Licensed | Copyright © 2017-present Lucas Leandro
 
 ## So how does it look like?
 
-Facebook
+<Showcase />
 
-![Facebook loading](https://raw.githubusercontent.com/LucasLeandro1204/vue-content-loading/master/static/facebook.gif "Facebook loading")
+RTL
 
-Code
+<Showcase rtl />
 
-![Code loading](https://raw.githubusercontent.com/LucasLeandro1204/vue-content-loading/master/static/code.gif "Code loading")
+## License
+
+This project is licensed under the MIT license. See the [LICENSE file](https://github.com/LucasLeandro1204/vue-content-loading/blob/master/LICENSE) for more details.
 
 ## Installation
 
