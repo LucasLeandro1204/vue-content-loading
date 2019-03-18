@@ -1,5 +1,5 @@
 <script>
-  import * as Components from '../../../src/core/components';
+  import * as Components from '../../../src/main';
 
   const colors = [
     {
