@@ -11,6 +11,8 @@ module.exports = {
     ['link', { rel: 'apple-touch-icon', href: '/icons/apple-touch-icon-152x152.png' }],
   ],
 
+  ga: 'UA-109495192-3',
+
   themeConfig: {
     repo: 'LucasLeandro1204/vue-content-loading',
     repoLabel: 'GitHub',
