@@ -57,9 +57,15 @@
       },
 
       loader () {
+        const component = Components[this.type];
+
+        if (! component) {
+          return;
+        }
+
         return {
           rtl: this.rtl,
-          is: Components[this.type],
+          is: component,
 
           ...this.background,
         };
@@ -76,7 +82,9 @@
 
 <template>
   <div>
-    <Component v-bind="loader" />
+    <Component v-bind="loader" v-if="loader" />
+
+    <slot />
 
     <button
       :key="index"
