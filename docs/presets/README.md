@@ -45,8 +45,6 @@ pageClass: extra-spacing
 
 <Showcase type="VclTwitch" />
 
-<!--
-
 ## Table
 
 `VclTable`
@@ -56,4 +54,4 @@ pageClass: extra-spacing
 | rows        | Number  | 5       | Number of rows    |
 | columns     | Number  | 4       | Number of columns |
 
-<Showcase type="VclTable" /> -->
+<Showcase type="VclTable" />
