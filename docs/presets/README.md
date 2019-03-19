@@ -39,12 +39,13 @@ pageClass: extra-spacing
 
 <Showcase type="VclBulletList" />
 
-<!--
 ## Twitch
 
 `VclTwitch`
 
 <Showcase type="VclTwitch" />
+
+<!--
 
 ## Table
 
