@@ -11,11 +11,11 @@ footer: MIT Licensed | Copyright © 2017-present Lucas Leandro
 
 ## So how does it look like?
 
-<Showcase />
+<Showcase type="VclFacebook" />
 
 RTL
 
-<Showcase rtl />
+<Showcase type="VclFacebook" rtl />
 
 ## License
 
