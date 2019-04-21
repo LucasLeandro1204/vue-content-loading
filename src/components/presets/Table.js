@@ -1,12 +1,15 @@
 import VueContentLoading from '../VueContentLoading';
 
-const getXPos = column => 5 + ((column - 1) * 100) + ((column - 1) * 20);
-const getYPos = row => (row - 1) * 30;
-
 export default {
   functional: true,
 
   props: {
+    header: {
+      type: Boolean,
+      required: false,
+      default: true,
+    },
+
     rows: {
       type: Number,
       required: false,
@@ -14,9 +17,12 @@ export default {
     },
 
     columns: {
-      type: Number,
+      type: [
+        Number, Array,
+      ],
       required: false,
       default: 4,
+      validate: columns => typeof columns === 'number' || columns.filter(width => typeof width === 'number'),
     },
   },
 
@@ -28,17 +34,26 @@ export default {
       rows,
       columns,
     } = props;
+    const gutter = 3;
+    const is_array = typeof columns === 'array';
+    const length = is_array
+      ? columns.length
+      : columns;
+    const height = 5;
+    const width = (100 - (length * gutter)) / length;
+    const table = [
 
-    const table = [];
-    const height = (rows * 30) - 20;
-    const width = ((columns - 1) * 20) + 10 + (columns * 100);
+    ];
 
-    for (let row = 0; row <= rows; row++) {
-      for (let column = 0; column <= columns; column++) {
-        table.push(<rect x={getXPos(column)} y={getYPos(row)} rx="3" ry="3" width="100" height="10" />)
+    for (let row = 0; row < rows; row++) {
+      for (let column = 0; column < length; column++) {
+        const y = (height + gutter) * row;
+        const x = column * (width + gutter);
+
+        table.push(
+          <rect x={x} y={y} rx="2" ry="2" height={height} width={is_array ? columns[column] : width}></rect>
+        );
       }
-
-      table.push(<rect y={getYPos(row) + 20} width={width} height="1" />);
     }
 
     return (
@@ -47,8 +62,8 @@ export default {
           props,
           attrs: data.attrs,
         }}
-        width={width}
-        height={height}
+        width={100}
+        height={((height + gutter) * length) - gutter}
       >
         {table}
       </VueContentLoading>
