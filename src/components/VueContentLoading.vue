@@ -60,12 +60,12 @@
 
       width: {
         default: 400,
-        type: Number,
+        type: [Number, String],
       },
 
       height: {
         default: 130,
-        type: Number,
+        type: [Number, String],
       },
 
       primary: {
