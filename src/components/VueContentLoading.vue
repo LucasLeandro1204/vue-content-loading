@@ -116,11 +116,9 @@
       },
     },
 
-    data () {
-      return {
-        uid: null,
-      };
-    },
+    data: () => ({
+      uid: null,
+    }),
 
     created () {
       this.uid = this._uid;
