@@ -55,18 +55,18 @@
 </script>
 
 <template>
-  <div>
+  <div class="color-switch">
     <slot :primary="background.primary" :secondary="background.secondary"></slot>
     <button :style="{ backgroundColor: color.primary }" v-for="(color, index) in colors" :key="index" @click.prevent="change(color)"></button>
   </div>
 </template>
 
-<style scoped>
-  div {
+<style>
+  .color-switch {
     max-width: 350px;
   }
 
-  button {
+  .color-switch button {
     width: 15px;
     height: 15px;
     border: none;

@@ -1,16 +1,19 @@
-var path = require('path')
-var webpack = require('webpack')
+const {
+  join,
+} = require('path');
+const webpack = require('webpack');
+const VueLoaderPlugin = require('vue-loader/lib/plugin');
 
 module.exports = {
   entry: {
     'docs/assets/js/app.js': './src/app.js',
-     'dist/vuecontentloading.js': './src/core/components.js'
+    'dist/vuecontentloading.js': './src/core/components.js',
   },
   output: {
-    path: path.resolve(__dirname, './'),
+    path: join(__dirname, './'),
     filename: '[name]',
     library: 'VueContentLoading',
-    libraryTarget: 'umd'
+    libraryTarget: 'umd',
   },
   module: {
     rules: [
@@ -20,14 +23,29 @@ module.exports = {
         options: {
           loaders: {
             'scss': 'vue-style-loader!css-loader!sass-loader',
-            'sass': 'vue-style-loader!css-loader!sass-loader?indentedSyntax'
-          }
+          },
         }
       },
       {
         test: /\.js$/,
         loader: 'babel-loader',
         exclude: /node_modules/
+      },
+      {
+        test: /\.css$/,
+        use: [
+          {
+            loader: 'vue-style-loader'
+          },
+          {
+            loader: 'css-loader',
+            options: {
+              modules: {
+                localIdentName: '[local]_[hash:base64:8]',
+              },
+            },
+          }
+        ]
       },
       {
         test: /\.(png|jpg|gif|svg)$/,
@@ -51,8 +69,11 @@ module.exports = {
   performance: {
     hints: false
   },
-  devtool: '#eval-source-map'
-}
+  devtool: '#eval-source-map',
+  optimization: {
+    minimize: true,
+    },
+};
 
 if (process.env.NODE_ENV === 'production') {
   module.exports.devtool = '#source-map'
@@ -62,14 +83,11 @@ if (process.env.NODE_ENV === 'production') {
         NODE_ENV: '"production"'
       }
     }),
-    new webpack.optimize.UglifyJsPlugin({
-      sourceMap: true,
-      compress: {
-        warnings: false
-      }
-    }),
+    new VueLoaderPlugin(),
     new webpack.LoaderOptionsPlugin({
-      minimize: true
+      options: {
+        sourceMap: true,
+      },
     })
   ])
 }
