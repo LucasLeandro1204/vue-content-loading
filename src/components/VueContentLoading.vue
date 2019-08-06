@@ -115,9 +115,15 @@
         };
       },
     },
-    
+
+    data () {
+      return {
+        uid: null,
+      };
+    },
+
     created () {
-      this.uid = this._uid
-    }
+      this.uid = this._uid;
+    },
   };
 </script>
