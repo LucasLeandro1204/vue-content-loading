@@ -91,11 +91,11 @@
       },
 
       gradientId () {
-        return `gradient-${this._uid}`;
+        return `gradient-${this.uid}`;
       },
 
       clipPathId () {
-        return `clipPath-${this._uid}`;
+        return `clipPath-${this.uid}`;
       },
 
       svg () {
@@ -114,6 +114,16 @@
           clipPath: 'url(#' + this.clipPathId + ')',
         };
       },
+    },
+
+    data () {
+      return {
+        uid: null,
+      };
+    },
+
+    created () {
+      this.uid = this._uid;
     },
   };
 </script>
