@@ -60,7 +60,7 @@
 
       width: {
         default: 400,
-        type: Number,
+        type: [Number, String],
       },
 
       height: {
