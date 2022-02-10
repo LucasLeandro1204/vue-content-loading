@@ -46,7 +46,7 @@
     "eslint-plugin-react": "^7.4.0",
     "file-loader": "^1.1.4",
     "github-markdown-css": "^2.9.0",
-    "node-sass": "^4.12.0",
+    "node-sass": "^7.0.0",
     "sass-loader": "^6.0.6",
     "vue-loader": "^15.7.1",
     "vue-template-compiler": "^2.5.13",
