@@ -1,0 +1,26 @@
+{
+  "$schema": "./node_modules/oxlint/configuration_schema.json",
+  "plugins": ["eslint", "typescript", "unicorn", "oxc", "import", "vitest", "vue"],
+  "env": {
+    "browser": true,
+    "node": true
+  },
+  "ignorePatterns": [
+    "dist/**",
+    "coverage/**",
+    "docs/.vitepress/cache/**",
+    "docs/.vitepress/dist/**"
+  ],
+  "rules": {
+    "typescript/consistent-type-imports": "error",
+    "unicorn/prefer-node-protocol": "error"
+  },
+  "overrides": [
+    {
+      "files": ["tests/**/*.test.ts"],
+      "env": {
+        "vitest": true
+      }
+    }
+  ]
+}

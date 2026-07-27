@@ -1,0 +1,15 @@
+{
+  "$schema": "./node_modules/oxfmt/configuration_schema.json",
+  "printWidth": 100,
+  "singleQuote": true,
+  "semi": true,
+  "trailingComma": "all",
+  "ignorePatterns": [
+    "dist/**",
+    "coverage/**",
+    "docs/.vitepress/cache/**",
+    "docs/.vitepress/dist/**",
+    "pnpm-lock.yaml",
+    "static/**"
+  ]
+}

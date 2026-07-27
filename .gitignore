@@ -1,12 +1,15 @@
 .DS_Store
 node_modules
 dist
-npm-debug.log
-yarn-error.log
+coverage
+*.log
 
-# Editor directories and files
+.vitepress/cache
+.vitepress/dist
+docs/.vitepress/cache
+docs/.vitepress/dist
+
 .idea
-*.suo
-*.ntvs*
-*.njsproj
-*.sln
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json

@@ -1,48 +1,98 @@
 {
   "name": "vue-content-loading",
-  "description": "Vue component to easily build (or use presets) SVG loading cards Facebook like.",
   "version": "2.0.0",
-  "author": {
-    "name": "Lucas Leandro",
-    "url": "https://lucasleandro.dev",
-    "email": "lucasleandro1204@gmail.com"
+  "description": "Tiny, accessible SVG content loaders for Vue 3.",
+  "keywords": [
+    "accessibility",
+    "content-loader",
+    "loading",
+    "nuxt",
+    "placeholder",
+    "skeleton",
+    "ssr",
+    "svg",
+    "vue",
+    "vue3"
+  ],
+  "homepage": "https://lucasleandro1204.github.io/vue-content-loading/",
+  "bugs": {
+    "url": "https://github.com/LucasLeandro1204/vue-content-loading/issues"
   },
   "license": "MIT",
-  "private": false,
-  "files": [
-    "dist/"
-  ],
-  "cdn": "dist/vue-content-loading.js",
-  "main": "dist/vue-content-loading.cjs.js",
-  "unpkg": "dist/vue-content-loading.js",
-  "module": "dist/vue-content-loading.es.js",
-  "jsdelivr": "dist/vue-content-loading.js",
-  "umd:main": "dist/vue-content-loading.js",
+  "author": {
+    "name": "Lucas Leandro",
+    "email": "lucasleandro1204@gmail.com",
+    "url": "https://lucasleandro.dev"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/LucasLeandro1204/vue-content-loading.git"
   },
-  "scripts": {
-    "docs:dev": "vuepress dev docs",
-    "docs:build": "vuepress build docs"
-  },
-  "resolutions": {
-    "webpack-dev-middleware": "3.6.0"
-  },
-  "keywords": [
-    "ui",
-    "ux",
-    "svg",
-    "vue",
-    "card",
-    "cards",
-    "vuejs",
-    "loading",
-    "facebook",
-    "animation",
-    "loading-animations"
+  "files": [
+    "dist"
   ],
+  "type": "module",
+  "sideEffects": false,
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "unpkg": "./dist/index.global.js",
+  "jsdelivr": "./dist/index.global.js",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.js"
+      },
+      "require": {
+        "types": "./dist/index.d.cts",
+        "default": "./dist/index.cjs"
+      }
+    },
+    "./package.json": "./package.json"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "pnpm run build:lib && pnpm run docs:build",
+    "build:lib": "vite build && tsc -p tsconfig.build.json && node scripts/copy-cjs-types.mjs",
+    "dev": "vitepress dev docs",
+    "docs:build": "vitepress build docs",
+    "docs:preview": "vitepress preview docs",
+    "format": "oxfmt --check .",
+    "format:write": "oxfmt --write .",
+    "lint": "oxlint --type-aware --deny-warnings .",
+    "lint:fix": "oxlint --type-aware --fix .",
+    "package:check": "publint && node scripts/check-package.mjs && node scripts/check-runtime-exports.mjs && node scripts/check-tree-shaking.mjs",
+    "prepack": "pnpm run build:lib",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "typecheck": "vue-tsc --noEmit -p tsconfig.json",
+    "verify": "pnpm run format && pnpm run lint && pnpm run typecheck && pnpm run test && pnpm run build:lib && pnpm run package:check && pnpm run docs:build"
+  },
   "devDependencies": {
-    "vuepress": "^0.14.10"
-  }
+    "@arethetypeswrong/cli": "^0.18.5",
+    "@types/node": "^26.1.1",
+    "@vue/server-renderer": "^3.5.40",
+    "@vue/test-utils": "^2.4.11",
+    "happy-dom": "^20.10.6",
+    "oxfmt": "^0.59.0",
+    "oxlint": "^1.74.0",
+    "oxlint-tsgolint": "^0.25.0",
+    "publint": "^0.3.21",
+    "typescript": "^6.0.3",
+    "vite": "^8.1.5",
+    "vitepress": "^1.6.4",
+    "vitest": "^4.1.10",
+    "vue": "^3.5.40",
+    "vue-tsc": "^3.3.7"
+  },
+  "peerDependencies": {
+    "vue": "^3.5.0"
+  },
+  "engines": {
+    "node": "^20.19.0 || >=22.12.0"
+  },
+  "packageManager": "pnpm@11.11.0"
 }
